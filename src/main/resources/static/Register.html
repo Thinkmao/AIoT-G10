@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container" >
+  <div class="row" style="padding-top: 20px">
+    <div class="col-lg-6" style="margin: auto">
+      <h2 style="text-align: center">注册</h2>
+      <form id="registerForm"  style="margin-bottom: 20px">
+        <div class="form-group">
+          <label for="registerUsername">用户名</label>
+          <input type="text" class="form-control" id="registerUsername" required>
+        </div>
+        <div class="form-group">
+          <label for="registerPassword">密码</label>
+          <input type="password" class="form-control" id="registerPassword" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">确认密码</label>
+          <input type="password" class="form-control" id="confirmPassword" required>
+        </div>
+        <div class="form-group">
+          <label for="height">身高</label>
+          <input type="number" class="form-control" id="height" >
+        </div>
+        <div class="form-group">
+          <label for="weight">体重</label>
+          <input type="number" class="form-control" id="weight" >
+        </div>
+        <button type="submit" class="btn btn-primary">注册</button>
+      </form>
+      <p>已有账号？<a href="Login.html" id="toLogin">登录</a></p>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/Register.js"></script>
+</body>
+</html>
