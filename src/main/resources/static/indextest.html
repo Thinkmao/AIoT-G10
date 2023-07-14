@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data Display</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container mt-5">
+  <h2 class="text-center">用户数据展示</h2>
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <h4>用户信息</h4>
+      <table class="table">
+        <tbody>
+        <tr>
+          <th scope="row">用户ID</th>
+          <td>123456</td>
+        </tr>
+        <tr>
+          <th scope="row">身高</th>
+          <td>175cm</td>
+        </tr>
+        <tr>
+          <th scope="row">体重</th>
+          <td>70kg</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h4>用户图片</h4>
+      <img src="https://via.placeholder.com/150" class="img-thumbnail" alt="User Image">
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h4>饼状图</h4>
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="/js/piechart.js"></script>
+</body>
+</html>
