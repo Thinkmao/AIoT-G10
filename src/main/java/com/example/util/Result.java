@@ -52,7 +52,7 @@ public class Result
         return new Result(1, "success", data);
     }
 
-    public static Result success(String msg,Object data)
+    public static Result success(String msg, Object data)
     {
         return new Result(1, msg, data);
     }

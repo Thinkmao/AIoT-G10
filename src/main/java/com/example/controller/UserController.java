@@ -37,9 +37,9 @@ public class UserController
             }
             else
             {
-                userService.update(new UpdateWrapper<User>().eq("userID",id).set("login", 1));
+                userService.update(new UpdateWrapper<User>().eq("userID", id).set("login", 1));
                 StpUtil.login(id);
-                return Result.success("Login Success!",StpUtil.getTokenInfo().getTokenValue());
+                return Result.success("Login Success!", StpUtil.getTokenInfo().getTokenValue());
             }
         }
     }
