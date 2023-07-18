@@ -1,7 +1,6 @@
 package com.example.controller;
 
 import com.alibaba.fastjson2.JSON;
-import com.alibaba.fastjson2.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.pojo.Environment;
 import com.example.pojo.Posture;
@@ -32,7 +31,7 @@ public class ScheduleController
         {
             Environment env = environmentService.getOne(new QueryWrapper<Environment>().eq("envID", envCount));
             WebServer.push("1", msg2Json("200", "send temp", env.getTemperature()));
-            WebServer.push("2", msg2Json("200", "send humid", env.getHumidity()));
+            WebServer.push("1", msg2Json("200", "send humid", env.getHumidity()));
         }
     }
 
@@ -43,7 +42,7 @@ public class ScheduleController
         if (posCount > 0)
         {
             Posture pos = postureService.getOne(new QueryWrapper<Posture>().eq("posID", posCount));
-            WebServer.push("3", msg2Json("200", "send status", pos.getStatus()));
+            WebServer.push("1", msg2Json("200", "send status", pos.getStatus()));
         }
     }
 

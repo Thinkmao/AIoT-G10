@@ -13,7 +13,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @ServerEndpoint("/conn/{uid}")
 public class WebServer
 {
-    private static Integer userCount;
+    private static Integer userCount = 0;
     private static CopyOnWriteArrayList<WebServer> servers = new CopyOnWriteArrayList<>();
     private Session session;
     private String uid;
