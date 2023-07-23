@@ -16,7 +16,7 @@ connection = pymysql.connect(host='localhost', user='root', passwd='qwer@123', d
 def env_db_operation(data):
 	list = data.strip('[]').split(',')
 	cursor = connection.cursor()
-	sqlstmt = "INSERT INTO Environment VALUES(%d,%f,%f,now())"%(int(list[0]),float(list[1]),float(list[2]))
+	sqlstmt = "INSERT INTO Environment VALUES(%d,%.2f,%.1f,now())"%(int(list[0]),float(list[1]),float(list[2]))
 	print("SQL statement: " + sqlstmt)
 	cursor.execute(sqlstmt)
 	connection.commit()
@@ -69,6 +69,7 @@ def subscribe_pos():
 	client.loop_forever()
 	
 if __name__ == '__main__':
+	print("Database connection success!")
 	env_subscribe_process = multiprocessing.Process(target=subscribe_env)
 	pos_subscribe_process = multiprocessing.Process(target=subscribe_pos)
 	env_subscribe_process.start()

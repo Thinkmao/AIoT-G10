@@ -28,7 +28,7 @@ def publish_env():
     msg_number = 1
     while True:
         time.sleep(1)
-        msg = f'[{msg_number},{random.uniform(15,30)},{random.random()}]'
+        msg = f'[{msg_number},{random.uniform(15,35)},{random.uniform(20,100)}]'
         result = client.publish(topic, msg)
         status = result[0]
         if status == 0:
@@ -53,7 +53,12 @@ def publish_pos():
     msg_number = 1
     while True:
         time.sleep(1)
-        msg = f'[{msg_number},{random.choice([0, 1])}]'
+        test = random.randint(1,10)
+        if(test == 10):
+            result = 0
+        else:
+            result = 1
+        msg = f'[{msg_number},{result}]'
         result = client.publish(topic, msg)
         status = result[0]
         if status == 0:
